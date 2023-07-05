@@ -109,3 +109,4 @@ ENV/
 
 *.p12
 ./*.json
+.pre-commit-config.yaml
