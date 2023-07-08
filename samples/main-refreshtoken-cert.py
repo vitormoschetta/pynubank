@@ -1,7 +1,8 @@
 from pynubank import Nubank, MockHttpClient
 
+# Nota: Existe um limite de refresh tokens que podem ser gerados por dia. Salve o refresh token gerado para não precisar gerar outro.
+
 nu = Nubank()
-# nu.authenticate_with_cert("96332824204", "Aewk2680*", "cert.p12")
 refresh_token = nu.authenticate_with_cert('CPF', 'Pass', 'cert.p12')
 nu.authenticate_with_refresh_token(refresh_token, 'cert.p12')
 
